@@ -1,0 +1,34 @@
+<script >
+export default {
+    name: "AppMovie",
+    props: {
+        details: Object
+    }
+}
+</script>
+
+<template>
+    <!-- card -->
+    <div class="movie">
+        <h3>{{ details.title }}</h3>
+        <h4 class="text">{{ details.original_title }}</h4>
+        <div class="text">{{ details.original_language }}</div>
+        <div class="text">{{ details.vote_average }}</div>
+    </div>
+</template>
+
+<style lang="scss" scoped>
+@use '../../styles/partials/variables' as*;
+
+.movie {
+    width: calc(100% / 6 - 40px);
+    padding: 20px;
+    margin: 0 20px;
+    margin-bottom: 30px;
+    text-align: center;
+
+    .text {
+        margin-bottom: 5px;
+    }
+}
+</style>
