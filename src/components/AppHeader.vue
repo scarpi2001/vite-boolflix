@@ -14,12 +14,12 @@ export default {
     }
   },
   methods: {
-    getMovies() {
+    getSearch() {
 
-      let myUrl = store.apiURL;
+      let myUrl = store.popularsApiUrl;
 
-      if (store.title !== "") {
-        myUrl += `&${store.apiQuery}=${store.query}`
+      if (store.query !== "") {
+        myUrl = `${store.multiApiURL}&query=${store.query}&language=it-IT`
       }
       axios.get(myUrl)
         .then(res => {
@@ -30,10 +30,11 @@ export default {
         }
 
         );
+
     }
   },
   mounted() {
-    this.getMovies();
+    this.getSearch();
   }
 }
 </script>
@@ -41,7 +42,7 @@ export default {
 <template>
   <header>
     <h1>BOOLFLIX</h1>
-    <AppSearch @searchMovies="getMovies" />
+    <AppSearch @search="getSearch" />
   </header>
 </template>
 

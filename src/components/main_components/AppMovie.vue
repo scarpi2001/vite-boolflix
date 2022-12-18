@@ -10,8 +10,12 @@ export default {
 <template>
     <!-- card -->
     <div class="movie">
+        <h3 v-if="details.media_type = 'tv'">{{ details.name }}</h3>
         <h3>{{ details.title }}</h3>
+
+        <h4 class="text" v-if="details.media_type = 'tv'">{{ details.original_name }}</h4>
         <h4 class="text">{{ details.original_title }}</h4>
+
         <div class="text">{{ details.original_language }}</div>
         <div class="text">{{ details.vote_average }}</div>
     </div>

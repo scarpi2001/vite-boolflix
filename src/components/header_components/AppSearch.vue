@@ -14,7 +14,7 @@ export default {
 <template>
     <div class="search_container">
         <input type="text" placeholder="Cerca un film o una serie" v-model="store.query">
-        <button class="search" @click="$emit('searchMovies')">Search</button>
+        <button class="search" @click="$emit('search')">Search</button>
     </div>
 </template>
 
