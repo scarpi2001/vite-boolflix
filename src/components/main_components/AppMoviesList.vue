@@ -29,5 +29,6 @@ export default {
 .movies_box {
     display: flex;
     flex-wrap: wrap;
+    padding: 50px 0;
 }
 </style>

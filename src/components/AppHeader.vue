@@ -16,10 +16,10 @@ export default {
   methods: {
     getSearch() {
 
-      let myUrl = store.popularsApiUrl;
+      let myUrl = store.popularsApi;
 
       if (store.query !== "") {
-        myUrl = `${store.multiApiURL}&query=${store.query}&language=it-IT`
+        myUrl = `${store.multiApi}&query=${store.query}&language=it-IT`
       }
       axios.get(myUrl)
         .then(res => {
