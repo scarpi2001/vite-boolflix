@@ -3,7 +3,27 @@ export default {
     name: "AppMovie",
     props: {
         details: Object
-    }
+    },
+    // data() {
+    //     return {
+    //         flags: [
+    //             {
+    //                 img: "../../assets/img/gb.svg",
+    //                 lang: "en"
+    //             },
+    //         ]
+    //     }
+    // },
+    // computed: {
+    //     getFlags() {
+    //         for (let i = 0; i < this.flags.length; i++) {
+    //             if (this.flags[i].lang.includes(this.details.original_language)) {
+    //                 return this.flags[i].img
+    //             }
+
+    //         }
+    //     }
+    // }
 }
 </script>
 
@@ -18,7 +38,12 @@ export default {
         <h4 class="text" v-if="details.media_type = 'tv'">{{ details.original_name }}</h4>
         <h4 class="text">{{ details.original_title }}</h4>
 
-        <div class="text">{{ details.original_language }}</div>
+        <div class="text">
+            <img v-if="details.original_language === 'en'" src="../../assets/img/gb.svg" alt="">
+            <img v-else-if="details.original_language === 'it'" src="../../assets/img/it.svg" alt="">
+            <img v-else-if="details.original_language === 'fr'" src="../../assets/img/fr.svg" alt="">
+            <img v-else src="../../assets/img/unknown.svg" alt="">
+        </div>
         <div class="text">{{ details.vote_average }}</div>
     </div>
 </template>
@@ -30,10 +55,13 @@ export default {
     width: calc(100% / 3 - 40px);
     margin: 0 20px;
     margin-bottom: 30px;
-    text-align: center;
 
     .text {
         margin-bottom: 5px;
+
+        img {
+            width: 40px;
+        }
     }
 }
 </style>
