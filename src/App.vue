@@ -24,16 +24,5 @@ export default {
 </template>
 
 <style lang="scss">
-@use "./styles/partials/variables" as*;
 @use "./styles/general" as*;
-
-#wrapper {
-  height: 100vh;
-
-  main {
-    overflow-y: auto;
-    margin-top: 80px;
-    background-color: #434343;
-  }
-}
 </style>

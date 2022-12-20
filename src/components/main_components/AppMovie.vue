@@ -16,12 +16,10 @@ export default {
 
         <div class="card_hover">
             <!-- titolo -->
-            <h3 v-if="details.media_type === 'tv'">Titolo: {{ details.name }}</h3>
-            <h3 v-else>Titolo: {{ details.title }}</h3>
+            <h3>Titolo: {{ details.name || details.title }}</h3>
 
             <!-- titolo originale -->
-            <h4 class="text" v-if="details.media_type === 'tv'">Titolo originale: {{ details.original_name }}</h4>
-            <h4 class="text" v-else>Titolo originale: {{ details.original_title }}</h4>
+            <h4>Titolo originale: {{ details.original_name || details.original_title }}</h4>
 
             <!-- img flag corrispondente alla lingua -->
             <div class="text">
@@ -58,11 +56,9 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../../styles/partials/variables' as*;
-
 .movie {
     width: calc(20% - 40px);
-    margin: 0 20px;
+    margin: 40px 20px;
     margin-bottom: 50px;
     position: relative;
 
@@ -76,7 +72,7 @@ export default {
         padding: 30px;
         overflow-y: auto;
         color: #fff;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.8);
 
         .text {
             margin-bottom: 5px;
@@ -99,12 +95,10 @@ export default {
 
     }
 
-
     &:hover .card_hover {
         display: block;
         cursor: pointer;
     }
-
 
 }
 

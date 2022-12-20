@@ -24,11 +24,11 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../../styles/partials/variables' as*;
-
 #movies_box {
     display: flex;
     flex-wrap: wrap;
-    padding: 50px 0;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: #434343;
 }
 </style>

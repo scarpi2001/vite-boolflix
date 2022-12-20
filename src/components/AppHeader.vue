@@ -55,10 +55,5 @@ header {
   background-color: black;
   height: 80px;
   padding: 30px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  width: 100%;
 }
 </style>
