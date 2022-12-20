@@ -14,7 +14,7 @@ export default {
 </script>
 
 <template>
-  <div class="wrapper">
+  <div id="wrapper">
     <AppHeader />
 
     <main>
@@ -26,4 +26,14 @@ export default {
 <style lang="scss">
 @use "./styles/partials/variables" as*;
 @use "./styles/general" as*;
+
+#wrapper {
+  height: 100vh;
+
+  main {
+    overflow-y: auto;
+    margin-top: 80px;
+    background-color: #434343;
+  }
+}
 </style>
