@@ -14,6 +14,7 @@ export default {
     }
   },
   methods: {
+    //chiamata API con URL filtrato attraverso proprietà di store 'query'
     getSearch() {
 
       let myUrl = store.popularsApi;

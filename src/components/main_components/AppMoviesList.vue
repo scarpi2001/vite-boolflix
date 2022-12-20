@@ -18,7 +18,7 @@ export default {
 
 <template>
     <!-- contenitore movies -->
-    <div class="movies_box">
+    <div id="movies_box">
         <AppMovie v-for="movie in store.moviesList" :key="movie.id" :details="movie" />
     </div>
 </template>
@@ -26,7 +26,7 @@ export default {
 <style lang="scss" scoped>
 @use '../../styles/partials/variables' as*;
 
-.movies_box {
+#movies_box {
     display: flex;
     flex-wrap: wrap;
     padding: 50px 0;
