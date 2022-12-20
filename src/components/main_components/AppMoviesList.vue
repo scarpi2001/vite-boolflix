@@ -27,7 +27,7 @@ export default {
 #movies_box {
     display: flex;
     flex-wrap: wrap;
-    height: 100vh;
+    height: calc(100vh - 80px);
     overflow-y: auto;
     background-color: #434343;
 }
