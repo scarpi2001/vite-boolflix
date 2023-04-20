@@ -45,13 +45,23 @@ export default {
 
             <!-- voto -->
             <div id="vote">
-                <ul>
+                <!-- <ul>
                     <li v-for="n in getVote">
                         <font-awesome-icon icon="fa-solid fa-star" />
                     </li>
                 </ul>
                 <ul>
                     <li v-for="n in getEmpty">
+                        <font-awesome-icon icon="fa-regular fa-star" />
+                    </li>
+                </ul> -->
+                <ul>
+                    <li v-for="element in Math.round(details.vote_average / 2)">
+                        <font-awesome-icon icon="fa-solid fa-star" />
+                    </li>
+                </ul>
+                <ul>
+                    <li v-for="element in 5 - Math.round(details.vote_average / 2)">
                         <font-awesome-icon icon="fa-regular fa-star" />
                     </li>
                 </ul>

@@ -51,9 +51,10 @@ export default {
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   color: red;
   background-color: black;
   height: 80px;
-  padding: 30px;
+  padding: 0 30px;
 }
 </style>

@@ -19,5 +19,18 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+    .search_container {
+        input {
+            width: 300px;
+            padding: 10px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
 
+        button {
+            padding: 10px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+    }
 </style>
