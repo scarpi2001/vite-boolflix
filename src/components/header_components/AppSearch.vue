@@ -23,14 +23,13 @@ export default {
         input {
             width: 300px;
             padding: 10px;
-            border-top-left-radius: 20px;
-            border-bottom-left-radius: 20px;
+            border-radius: 5px;
+            margin-right: 20px;
         }
 
         button {
             padding: 10px;
-            border-top-right-radius: 20px;
-            border-bottom-right-radius: 20px;
+            border-radius: 5px;
         }
     }
 </style>

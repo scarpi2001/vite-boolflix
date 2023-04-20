@@ -82,10 +82,12 @@ export default {
 <style lang="scss" scoped>
 .movie {
     width: calc(20% - 40px);
-    margin: 40px 20px;
-    margin-bottom: 50px;
+    margin: 30px 20px;
     position: relative;
 
+    img {
+        border-radius: 20px;
+    }
     .card_hover {
         display: none;
         position: absolute;
@@ -94,6 +96,7 @@ export default {
         height: 100%;
         width: 100%;
         padding: 30px;
+        border-radius: 20px;
         overflow-y: auto;
         color: #fff;
         background-color: rgba(0, 0, 0, 0.8);
