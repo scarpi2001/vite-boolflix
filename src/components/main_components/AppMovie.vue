@@ -27,7 +27,7 @@ export default {
 
         <!-- locandina -->
         <img :src="`https://image.tmdb.org/t/p/w342/${details.poster_path}`" alt="">
-
+        
         <div class="card_hover">
             <!-- titolo -->
             <h3>Titolo: {{ details.name || details.title }}</h3>
@@ -36,7 +36,7 @@ export default {
             <h4>Titolo originale: {{ details.original_name || details.original_title }}</h4>
 
             <!-- img flag corrispondente alla lingua -->
-            <div class="text">
+            <div class="lang">
                 <img v-if="details.original_language === 'en'" src="../../assets/img/gb.svg" alt="">
                 <img v-else-if="details.original_language === 'it'" src="../../assets/img/it.svg" alt="">
                 <img v-else-if="details.original_language === 'fr'" src="../../assets/img/fr.svg" alt="">
@@ -101,12 +101,8 @@ export default {
         color: #fff;
         background-color: rgba(0, 0, 0, 0.8);
 
-        .text {
+        .lang {
             margin-bottom: 5px;
-
-            img {
-                width: 40px;
-            }
         }
 
         #vote {
@@ -135,6 +131,24 @@ export default {
     .movie {
         width: calc(25% - 40px);
     }
+
+}
+
+@media screen and (max-width: 750px) {
+
+    .movie {
+        width: calc(50% - 40px);
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+
+.movie {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
 
 }
 </style>

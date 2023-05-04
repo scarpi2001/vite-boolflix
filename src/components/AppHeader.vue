@@ -42,7 +42,8 @@ export default {
 
 <template>
   <header>
-    <h1>BOOLFLIX</h1>
+    <h1 id="logo">BOOLFLIX</h1>
+    <h1 id="mini-logo">B</h1>
     <AppSearch @search="getSearch" />
   </header>
 </template>
@@ -56,5 +57,23 @@ header {
   background-color: black;
   height: 80px;
   padding: 0 30px;
+
+  #mini-logo {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+header {
+    #logo {
+      display: none;
+    }
+
+    #mini-logo {
+      display: block;
+    }
+}
+
 }
 </style>
